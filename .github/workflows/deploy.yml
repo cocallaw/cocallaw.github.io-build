@@ -37,9 +37,12 @@ jobs:
 
       - name: Install frontend dependencies
         run: npm install
-        
+
+      - name: Build frontend assets
+        run: npm run build
+
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build      
         env:
           JEKYLL_ENV: "production"
 
