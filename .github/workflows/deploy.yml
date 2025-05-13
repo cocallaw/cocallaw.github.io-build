@@ -22,6 +22,22 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install frontend dependencies
+        run: npm install
+        
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
