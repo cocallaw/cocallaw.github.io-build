@@ -66,6 +66,7 @@ jobs:
           git clone --depth 1 --branch main git@github.com:cocallaw/cocallaw.github.io.git out
           rm -rf out/*
           cp -r _site/* out/
+          cp _cname/CNAME out/ || echo "CNAME file not found"
           cd out
           git add .
           git commit -m "Deploy site on $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nothing to commit"
