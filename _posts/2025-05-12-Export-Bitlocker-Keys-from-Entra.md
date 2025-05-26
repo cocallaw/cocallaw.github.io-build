@@ -2,7 +2,7 @@
 title: "Export BitLocker Keys from Entra with Graph PowerShell"
 date: 2025-05-12 05:00:00 -500
 categories: [PowerShell, Azure, Microsoft Graph]
-tags: [powershell, azure, crowdstrike, bitlocker, entra, microsoft-graph]
+tags: [PowerShell, Azure, CrowdStrike, BitLocker, Entra, Microsoft Graph]
 author: CLC
 description: How to retrieve BitLocker recovery keys from Entra using PowerShell and Microsoft Graph.
 toc: true
