@@ -164,13 +164,11 @@ Run the following command to deploy the entire solution, including token retriev
 az deployment group create \
   --resource-group <resource-group-name> \
   --template-file main.bicep \
-  --parameters @main.bicepparam
+  --parameters main.bicepparam
 ```
-
 
 The `main.bicep` file internally calls the `token.bicep` module and injects the token into the session host configuration as part of the DSC extension setup.
 
-
 ## Conclusion
 
-These Bicep templates simplify and secure the deployment of Azure Virtual Desktop environments. By addressing API changes, they ensure compliance with best practices while streamlining the deployment process. Whether you are deploying a new AVD environment or managing an existing one, these templates provide a reliable and efficient solution.
+These Bicep templates simplify and secure the deployment of Azure Virtual Desktop environments. By retrieving the token as part of the deployment you can simplify your deployment process and in some cases reduce the number of steps needed.
