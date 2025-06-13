@@ -1,6 +1,6 @@
 ---
 title: "Manage Linux Machines with Github Actions and Tailscale"
-date: 2025-06-25 12:00:00 -500
+date: 2025-07-25 12:00:00 -500
 categories: [Tailscale, Github]
 tags: [GitHub Actions, Slack, Discord, CI/CD, Automation, Webhooks]
 author: CLC
