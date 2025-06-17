@@ -50,9 +50,9 @@ By isolating token generation into a dedicated module (`token.bicep`), we can tr
 
 The `token.bicep` file takes in the necessary information about the Host Pool resources that was created earlier in the template through the use of parameters and has the Host Pool generate an updated token by using the `registrationTokenOperation: 'Update'` property. The registration token is retrieved from the response by using the `listRegistrationTokens()` function on the `hostPoolTokenUpdate` resource.
 
-#### main.bicep hostPoolRegistrationToken Module
+#### **main.bicep hostPoolRegistrationToken Module**
 
-```bicep
+```powershell
 // Update the Host Pool to return Registration Token
 module hostPoolRegistrationToken 'token.bicep' = {
   name: 'hostPoolRegistrationToken'
@@ -76,9 +76,9 @@ module hostPoolRegistrationToken 'token.bicep' = {
 }
 ```
 
-#### token.bicep hostPoolTokenUpdate resource
+#### **token.bicep hostPoolTokenUpdate resource**
 
-```bicep
+```powershell
 resource hostPoolTokenUpdate 'Microsoft.DesktopVirtualization/hostPools@2024-04-03' = {
   name: hostPoolName
   location: location
@@ -103,7 +103,7 @@ resource hostPoolTokenUpdate 'Microsoft.DesktopVirtualization/hostPools@2024-04-
 
 The `token.bicep` template outputs the registration token that is valid for the configured duration, defaulting to eight hours. This token must be used immediately after creation, as it cannot be retrieved later.
 
-```bicep
+```powershell
 @secure()
 output registrationToken string = first(hostPoolTokenUpdate.listRegistrationTokens().value)!.token
 
