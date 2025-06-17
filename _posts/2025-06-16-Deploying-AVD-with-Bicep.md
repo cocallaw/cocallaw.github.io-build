@@ -137,7 +137,7 @@ az account set --subscription <your-subscription-id>
 ### 2. Prepare Parameter File
 
 Update the `main.bicepparam` file to provide deployment parameters specific to your environment.
-```bicep
+```powershell
 using 'main.bicep'
 
 /*AVD Config*/
