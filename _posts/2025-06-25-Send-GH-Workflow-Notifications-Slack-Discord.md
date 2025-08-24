@@ -1,6 +1,6 @@
 ---
 title: "Send GitHub Actions Workflow Notifications to Slack and Discord"
-date: 2025-07-25 12:00:00 -500
+date: 2025-10-25 12:00:00 -500
 categories: [PowerShell, Azure, Microsoft Graph]
 tags: [GitHub Actions, Slack, Discord, CI/CD, Automation, Webhooks]
 author: CLC
